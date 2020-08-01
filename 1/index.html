@@ -1,0 +1,291 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title></title>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+	<meta name="viewport" content="width=device-width">
+		<script src="https://kit.fontawesome.com/c6d216463b.js" crossorigin="anonymous"></script>
+	<style>
+		* {
+			margin: 0;
+			padding: 0;
+		}
+		.container {
+			position: relative;
+			padding: 0 100px;
+			min-height: 100vh;
+		}
+		.container:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			right: 0;
+			width: 350px;
+			height: 100%;
+			background: #333;
+			z-index: -2;
+		}
+		.container:after {
+			content: 'Healthy';
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			font-size: 38vh;
+			z-index: -2;
+			font-weight: 700;
+			padding-left: 10%;
+			color: black;
+			opacity: 0.1;
+	}
+		header {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 30px 0;
+		}
+		header .logo {
+			font-weight: 700;
+			text-transform: uppercase;
+			color: #333;
+			text-decoration: none;
+			font-size: 30px;
+		}
+		header .logo span{
+			color: #78ff00;
+		}
+		header ul{
+			position: relative;
+			display: flex;
+		}
+		header ul li{
+			list-style: none;
+			margin: 0 20px;
+		}
+		header ul li a{
+			position: relative;
+			text-decoration: none;
+			font-size: 18px;
+			padding: 4px 16px;
+			color: #333;
+			text-decoration: none;
+		}
+		header ul li:nth-child(3) a,
+		header ul li:nth-child(4) a{
+			color: #fff;
+		}
+		header ul li a:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left: 0;
+			width: 0;
+			height: 100%;
+			background: #78ff00;
+			z-index: -1;
+			transition: 0.5s ease-in-out;
+		}
+		header ul li a:hover:before,
+		header ul li a.active:before {
+			width: 40px;
+		}
+		.content {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			margin-top: 50px;
+		}
+		.content .bannerText {
+			position: relative;
+			max-width: 500px;
+			margin-right: 50px;
+		}
+		.content .bannerText div {
+			display: none;
+		}
+		.content .bannerText div.active {
+			display: initial;
+		}
+		.content .bannerText p{
+			font-size: 18px;
+			color: #333;
+			line-height: 1.8em;
+			margin: 20px 0;
+		}
+		.content .bannerText a{
+			position: relative;
+			display: inline-block;
+			text-transform: uppercase;
+			font-weight: 700;
+			letter-spacing: 1px;
+			text-decoration: none;
+			padding: 15px;
+			color: black;
+		}
+		.content .bannerText a:before {
+			content: '';
+			position: absolute;
+			top: 0;
+			left:0;
+			width: 60px;
+			height: 100%;
+			background: #78ff00;
+			z-index: -1;
+			transition: 0.5s ease-in-out;
+		}
+		.content .bannerText a:hover:before {
+						width: 100%;
+		}
+		.content .bannerImg {
+			position: relative;
+			width: 440px;
+			height: 440px;
+			background: #000;
+		}
+		.content .bannerImg img {
+			position: absolute;
+			top:0;
+			left: 0;
+			width: 100%;
+			height: 100%;
+			object-fit: cover;
+			transition: 0.5s;
+			opacity: 0;
+		}
+		.content .bannerImg img.active{
+			opacity: 1;
+		}
+		.icons {
+			display: flex;
+			justify-content: space-between;
+			align-items: center;
+			padding: 50px 0;
+		}
+		.icons .sci,
+		.icons .controlers{
+			position: absolute;
+			display: flex;
+		}
+		.icons .controlers {
+			right: 10%;
+		}
+ .icons .sci li{
+	list-style: none;
+	margin-right: 30px;
+}
+.icons .sci li img{
+	display: inline-block;
+	max-height: 24px;
+	transition: 0.5s ease-in-out;
+}
+.icons .sci li:hover img {
+	transform: translateY(-10px);
+
+} 
+.icons .controlers li {
+list-style: none;
+margin-left: 20px;
+cursor: pointer;
+filter: invert(1);
+	transition: 0.5s ease-in-out;
+}
+.icons .controlers li:hover {
+	opacity: 0.5;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+	</style>
+</head>
+<body>
+	<div class="container">
+<!-- 		<header>
+	<a href="#" class="logo">Googd <span>Food</span></a>
+	<ul>
+		<li><a href="" class="active">Home</a></li>
+		<li><a href="">Home</a></li>
+		<li><a href="">Home</a></li>
+		<li><a href="">Home</a></li>
+	</ul>
+</header> -->
+		<div class="content">
+			<div class="bannerText" id="slideshowText">
+				<div class="active">
+					<h2> EAT HEALTHY <br>
+					Stay Healthy</h2>
+					<p> Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoaboris nisi ut aliquip ex ea commodo consequat. Dui</p>
+					<a href="">Read more</a>
+				</div>
+				<div>
+					<h2> EAT HEALTHY <br>
+					Stay Healthy</h2>
+					<p> Loressdfm ipsfsdfum dolsdfsor sitsfdgdamet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim fsdfad minim veniam, quis nostrud exercitation ullamcoaboris nisi ut aliquip ex ea commodo consequat. Dui</p>
+					<a href="">Read more</a>
+				</div>
+								<div>
+					<h2> EAT HEALTHY <br>
+					Stay Healthy</h2>
+					<p> Loremnsfsn ipsum dolorf,mf, sit amef,,fkf,ft, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamcoaboris nisi ut aliquip ex ea commodo consequat. Dui</p>
+					<a href="">Read more</a>
+				</div>
+			</div>
+			<div class="bannerImg" id="slideshow">
+				<img src="pizza.jpg" class="active" alt="">
+				<img src="pizza.jpg" alt="">
+				<img src="pizza.jpg" alt="">
+			</div>
+		</div>
+		<div class="icons">
+			<ul class="sci">
+				<li><a href=""><i class="fab fa-instagram"></i></a></li>
+				<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+				<li><a href=""><i class="fab fa-facebook-square"></i></a></li>
+			</ul>
+			<ul class="controlers">
+				<li><a><img src="back.png" alt="" onclick="prevSlide();prevSlideText();"></a></li>
+				<li><a><img src="next.png" alt="" onclick="nextSlide();prevSlideText();"></a></li>
+			</ul>
+		</div>
+	</div>
+	<script type="text/javascript">  
+		var slideshow = document.getElementById('slideshow');
+		var slides = slideshow.getElementsByTagName('img');
+		var index = 0; 
+		function nextSlide() {
+			slides[index].classList.remove('active');
+			index = (index + 1) % slides.length;
+			slides[index].classList.add('active');
+		}
+				function prevSlide() {
+			slides[index].classList.remove('active');
+			index = (index - 1 + slides.length) % slides.length;
+			slides[index].classList.add('active');
+		}
+
+
+		var slideshowText = document.getElementById('slideshowText');
+		var slidesText = slideshowText.getElementsByTagName('div');
+		var i = 0; 
+		function nextSlideText() {
+			slidesText[i].classList.remove('active');
+			i = (i + 1) % slidesText.length;
+			slidesText[i].classList.add('active');
+		}
+				function prevSlideText() {
+			slidesText[i].classList.remove('active');
+			i = (i - 1 + slidesText.length) % slidesText.length;
+			slidesText[i].classList.add('active');
+		}
+	</script>
+</body>
+</html>
