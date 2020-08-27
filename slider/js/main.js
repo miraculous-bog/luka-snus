@@ -1,3 +1,17 @@
+var slide = document.getElementById('slide');
+var	g = document.getElementById('g');
+var	m = document.getElementById('m');
+g.onmousemove = function(e) {
+	var x = e.clientX;
+	slide.style.left = x + 'px';
+	if (slide < 300 + 'px') {
+	m.style.background = 'black';
+}
+}
+
+$(".arrow-4").click(function() {
+    $(this).toggleClass("open");
+});
 var slideshow = document.getElementById('slideshow');
 		var slides = slideshow.getElementsByTagName('img');
 		var index = 0; 
